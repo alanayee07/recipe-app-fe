@@ -1,6 +1,10 @@
 import React, {useState} from 'react'
-import {AiOutlineMenu, AiOutlineSearch, AiOutlineClose, AiFillTag} from 'react-icons/ai'
+import {AiOutlineMenu, AiOutlineSearch, AiOutlineClose} from 'react-icons/ai'
 import {BsFillCartFill, BsPerson} from 'react-icons/bs'
+import {TbTruckReturn} from 'react-icons/tb'
+import {FaGoogleWallet} from 'react-icons/fa'
+import {MdHelp, MdOutlineFavorite} from 'react-icons/md'
+
 
 const TopNav = () => {
   const [sideNav, setSideNav] = useState(false);
@@ -43,6 +47,31 @@ const TopNav = () => {
           className='absolute top-4 right-4 cursor-pointer'
           size={25}
           onClick={() => setSideNav(!sideNav)} />
+        <h2 className='text-2xl p-4'>Yum <span className='text-orange-700 font-bold'>Eats</span></h2>
+          <nav>
+            <ul className='flex flex-col p-4 text-gray-900'>
+              <li className='text-xl py-4 flex'>
+                <BsPerson className='mr-4 text-white bg-black rounded-full' size={25}/>
+                My Account
+              </li>
+              <li className='text-xl py-4 flex'>
+                <TbTruckReturn className='mr-4 text-white bg-black rounded-full' size={25}/>
+                Delivery
+              </li>
+              <li className='text-xl py-4 flex'>
+                <MdOutlineFavorite className='mr-4 text-white bg-black rounded-full' size={25}/>
+                My Account
+              </li>
+              <li className='text-xl py-4 flex'>
+                <FaGoogleWallet className='mr-4 text-white bg-black rounded-full' size={25}/>
+                My Wallet
+              </li>
+              <li className='text-xl py-4 flex'>
+                <MdHelp className='mr-4 text-white bg-black rounded-full' size={25}/>
+                Help
+              </li>
+            </ul>
+          </nav>
       </div>
 
     </div>
